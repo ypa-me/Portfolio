@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.glow-capture {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-overlay {
+  --glow-size: 10rem;           
+  --glow-color: #05050586;
+  position: absolute;
+  mix-blend-mode: soft-lighten;
+  
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--glow-opacity, 0);
+  background: radial-gradient(
+    circle var(--glow-size) at var(--glow-x, 50%) var(--glow-y, 50%),
+    var(--glow-color),
+    transparent 60%
+  );
+  transition: opacity 200ms ease;
+}
+.reacts-to-glow {
+  position: relative;
+  z-index: 10;
+  color: white;
+}
+
+
+.no-glow {
+  position: relative;
+  z-index: 20; 
+}
