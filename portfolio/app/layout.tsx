@@ -2,16 +2,20 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const ppmori = localFont({
+  src: '../public/fonts/PPMori/PPMori-SemiBold.otf',  // Single file first
+  variable: '--font-ppmori',
+  weight: '200',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const jetbrains = localFont({
+  src: '../public/fonts/JetBrainsMono/JetBrainsMono-Light.ttf',
+  variable: '--font-jetbrains',
+  weight: '300',
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,27 +28,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <header className="fixed top-0 left-0 w-full h-12 flex items-center border-b border-zinc-200 px-4 bg-[rgb(0,0,0)] dark:border-zinc-700 z-50">
-  <div className="h-full flex items-center gap-2">
-    <div>
-      <Image
-        src="/main_logo.png"
-        alt="Main logo"
-        width={100}
-        height={20}
-        priority
-      />
-    </div>
+    <html lang="en" className={`${ppmori.variable} ${jetbrains.variable}`}>
+      <body>
+        <header className="w-full h-12 flex items-center bg-black/95   z-50">
+  <div className="flex items-center px-6">
+    <Image
+      src="/Black Outline Light.png"
+      alt="Main logo"
+      width={120}   // Reduced from 150
+      height={32}   // Reduced from 100 (fits h-12 perfectly)
+      priority
+      className="object-contain"
+    />
   </div>
 </header>
         
         
         <main className ="flex-1 bg-black">{children}</main>
-        <footer className="fixed bottom-0 align-left  px-4 dark:border-zinc-700 bg-black ">
+        <footer className=" align-left   dark:border-zinc-700 bg-black ">
           <div className="h-full flex items-center gap-2">
           <div ><a href="https://github.com/ypa-me/Webscraper">
           <Image

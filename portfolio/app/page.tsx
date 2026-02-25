@@ -1,92 +1,99 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import DotsBackground from './components/DotsBackground';
+import StarCrux from './components/StarCrux';
 
 
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    const capture = document.querySelector(".glow-capture") as HTMLElement | null;
-    const overlay = document.querySelector(".glow-overlay") as HTMLElement | null;
-    if (!capture || !overlay) return;
-
-    const handleMove = (e: MouseEvent) => {
-      const rect = capture.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      overlay.style.setProperty("--glow-x", `${x}px`);
-      overlay.style.setProperty("--glow-y", `${y}px`);
-      overlay.style.setProperty("--glow-opacity", "1");
-    };
-
-    const handleLeave = () => {
-      overlay.style.setProperty("--glow-opacity", "0");
-    };
-
-    capture.addEventListener("mousemove", handleMove);
-    capture.addEventListener("mouseleave", handleLeave);
-
-    return () => {
-      capture.removeEventListener("mousemove", handleMove);
-      capture.removeEventListener("mouseleave", handleLeave);
-    };
-  }, []);
+  
+    
   return (
     <div className=" bg-zinc-50 font-sans dark:bg-black">
-      <main className="glow-capture bg-black h-screen w-screen gap-8 relative">
-        <div className=" fixed left-2 top-70 botton-70 no-glow flex font-mono items-center flex-col justify-center h-auto w-225 gap-5 rounded-4xl  overflow-auto  bg-[rgb(15,14,14)] ">
+      
+      <main className="w-full h-full snap-none">
 
 
-          <h1 className ="text-5xl mx-5 my-5 ">Welcome</h1>
-          <div className ="text-2xl mx-5 my-5">
-            <p>Hello. I am a freelance full stack developer specializing in modern web applications with Next.js and MERN. </p>
-          </div>
-          <div className ="flex flex-row text-s justify-center gap-3 ">
-            <div className ="border-2 rounded-md p-2">
-              <Link href="/work">
-              <button>Projects and Certifications</button>
-              </Link>
 
-            </div>
-            <div className ="border-2 rounded-md p-2">
-              <Link href="/experience">
-              <button>Experience and Education</button>
-              </Link>
-
-            </div>
-            <div className ="border-2 rounded-md p-2">
-              <Link href="/reviews">
-              <button>Client Reviews and Testimonials</button>
-              </Link>
-
-            </div>
-            
-            
-          </div>
-          <div className = "grid place-items-center border-2 rounded-md p-2 mx-75 ">
-            <Link href="/reviews">
-              <button>Work with me on upwork</button>
-            </Link>
-
-          </div>
-          <div className = "grid place-items-center border-2 rounded-md p-2 mx-75 mb-5">
-            <Link href="/reviews">
-              <button>Donate</button>
-            </Link>
-
-          </div>
+         
+      <section className="h-screen flex  justify-center bg-black relative">
+        <DotsBackground />
+        <h1 className="absolute top-0 font-ppmori text-5xl  ">
+            Achieve perfection even if its impossible.
+          </h1>
+        <div className="absolute left-8 w-200 top-1/2 -translate-y-1/2 z-10 
+                
+                 bg-white/5 backdrop-blur-1
+                
+                border border-white/10 shadow-xl 
+                rounded-3xl p-5 overflow-hidden group">
           
-          
+          <p className="font-mono text-xl md:text-2xl text-slate-300">
+            We often focus on the unattainability of perfection, but we often forget that we can get infinitely closer to it.
+          </p>
         </div>
 
-
         
-          <div className="glow-overlay" />
+  
+  
           
+
+
+
+
+
+
+
+
+        <div className="absolute top-12 bottom-12 right-12 h-200 w-150 ">
+          <StarCrux sizeW={600} sizeH={750} />
+        </div>
         
-        
-      </main>
+      </section>
+
+
+
+
+
+      
+
+      <section className="h-screen bg-black  flex items-center px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-ppmori text-5xl md:text-6xl font-extralight mb-12">About</h2>
+          <p className="font-jetbrains-light text-lg md:text-xl leading-relaxed max-w-2xl">
+            Junior full stack developer focused on Next.js, React, Node.js, and modern web technologies.
+          </p>
+        </div>
+      </section>
+
+      <section className="h-screen bg-black flex items-center px-8 py-24">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-ppmori text-5xl md:text-6xl font-extralight mb-16">Projects</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="group bg-slate-700/50 backdrop-blur-sm p-8 rounded-2xl hover:bg-slate-600/50 transition-all duration-300">
+              <h3 className="font-jetbrains-light text-2xl mb-4 group-hover:text-white">Portfolio Site</h3>
+              <p className="font-jetbrains-light text-slate-300">Next.js 16 + Tailwind + Custom Fonts</p>
+            </div>
+            <div className="group bg-slate-700/50 backdrop-blur-sm p-8 rounded-2xl hover:bg-slate-600/50 transition-all duration-300">
+              <h3 className="font-jetbrains-light text-2xl mb-4 group-hover:text-white">MERN Project</h3>
+              <p className="font-jetbrains-light text-slate-300">Full stack app with MongoDB, Express, React</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="h-screen bg-black flex items-center justify-center px-8">
+        <div className="text-center">
+          <h2 className="font-ppmori text-5xl md:text-6xl font-[200] mb-12">Let's Work Together</h2>
+          <p className="font-jetbrains-light text-2xl text-slate-400 mb-8">Upwork: ypersand</p>
+          <a href="#contact" className="font-jetbrains-light bg-slate-700 hover:bg-slate-600 px-8 py-4 rounded-xl text-lg transition-all duration-300">
+            Hire Me
+          </a>
+        </div>
+      </section>
+    </main>
     </div>
   );
 }
