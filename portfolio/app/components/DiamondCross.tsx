@@ -12,10 +12,10 @@ const DiamondCross: React.FC<DiamondCrossProps> = ({
   // Stars: Miaplacidus (Top), Upsilon (Bottom), Theta (Left), Omega (Right)
   // All are A- or B-type (White/Blue-white)
   const stars = [
-    { name: 'Miaplacidus', t: '5%', l: '50%', w: 39, h: 45, d: '0s', c: '#ffffff' },
-    { name: 'Upsilon', b: '5%', l: '50%', w: 37, h: 42, d: '1.0s', c: '#eef2ff' },
-    { name: 'Theta', t: '48%', l: '5%', w: 37, h: 42, d: '2.0s', c: '#f0f4ff' },
-    { name: 'Omega', t: '48%', r: '5%', w: 32, h: 40, d: '3.0s', c: '#ffffff' },
+    { name: 'Miaplacidus', b: '5%', l: '50%', w: 39, h: 39, d: '1.0s', c: '#ffffff' },
+    { name: 'Upsilon', t: '48%', r: '5%', w: 37, h: 37, d: '3.0s', c: '#ffffff' },
+    { name: 'Theta', t: '48%', l: '5%', w: 37, h: 37, d: '2.0s', c: '#ffffff' },
+    { name: 'Omega', t: '5%', l: '50%', w: 32, h: 32, d: '0s', c: '#ffffff' },
   ];
 
   return (

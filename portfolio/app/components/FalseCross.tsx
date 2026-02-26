@@ -12,10 +12,10 @@ const FalseCross: React.FC<FalseCrossProps> = ({
   // Stars of the False Cross: [Top, Bottom, Left, Right]
   // Colors: Alsephina/Aspidiske/Markeb (White/Blue-white), Avior (Orange-red)
   const stars = [
-    { name: 'Alsephina', t: '5%', l: '50%', w: 37, h: 42, d: '0s', c: '#ffffff' },
-    { name: 'Avior', b: '5%', l: '48%', w: 39, h: 45, d: '0.8s', c: '#ffccaa' },
-    { name: 'Aspidiske', t: '48%', l: '8%', w: 38, h: 43, d: '1.6s', c: '#ffffff' },
-    { name: 'Markeb', t: '42%', r: '8%', w: 36, h: 40, d: '2.4s', c: '#e0f2ff' },
+    { name: 'Alsephina', t: '48%', r: '8%', w: 37, h: 37, d: '0s', c: '#ffffff' },
+    { name: 'Avior', b: '5%', l: '48%', w: 39, h: 39, d: '0.8s', c: '#ffffff' },
+    { name: 'Aspidiske', t: '42%', l: '8%', w: 38, h: 38, d: '1.6s', c: '#ffffff' },
+    { name: 'Markeb', t: '5%', l: '50%', w: 36, h: 36, d: '2.4s', c: '#ffffff' },
   ];
 
   return (
@@ -26,7 +26,7 @@ const FalseCross: React.FC<FalseCrossProps> = ({
           display: flex;
           align-items: center;
           justify-content: center;
-          animation: twinkle 4s ease-in-out infinite;
+          
           transform: translateX(-50%);
         }
         .star-shape {

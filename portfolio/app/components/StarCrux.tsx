@@ -43,19 +43,19 @@ const StarCrux: React.FC<StarCruxProps> = ({
         }
 
         /* Gacrux (Top) - Orange-ish tint in real life */
-            .s1 { top: 10%; left: 50%; width: 27px; height: 41px; transform: translateX(-50%); }
+            .s1 { top: 10%; left: 50%; width: 37px; height: 37px; transform: translateX(-50%); }
 
             /* Acrux (Bottom) - The brightest */
-            .s2 { top: 90%; left: 53%; width: 39px; height: 45px; transform: translateX(-50%); }
+            .s2 { top: 90%; left: 53%; width: 39px; height: 39px; transform: translateX(-50%); }
 
             /* Mimosa (Left) - Very bright blue-white */
-            .s3 { top: 42%; left: 15%; width: 38px; height: 43px; }
+            .s3 { top: 42%; left: 15%; width: 38px; height: 38px; }
 
             /* Delta Crucis (Right) - Dimmest of the main 4, and higher up! */
-            .s4 { top: 35%; right: 15%; width: 36px; height: 40px; }
+            .s4 { top: 35%; right: 15%; width: 36px; height: 36px; }
 
             /* Epsilon Crucis (The "Extra" one) - Tucked into the lower right quadrant */
-            .s5 { top: 55%; right: 30%; width: 34px; height: 47px; }
+            .s5 { top: 55%; right: 30%; width: 15px; height: 15px; }
 
         @keyframes twinkle {
           0%, 100% { opacity: 1; transform: scale(1); }
