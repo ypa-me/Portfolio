@@ -5,14 +5,24 @@ import Image from "next/image";
 import localFont from "next/font/local";
 
 const ppmori = localFont({
-  src: '../public/fonts/PPMori/PPMori-SemiBold.otf',  // Single file first
+  src: '../public/fonts/PPMori/PPMori-SemiBold.otf',  
   variable: '--font-ppmori',
-  weight: '200',
+  weight: '300',
 });
 
 const jetbrains = localFont({
   src: '../public/fonts/JetBrainsMono/JetBrainsMono-Light.ttf',
   variable: '--font-jetbrains',
+  weight: '300',
+});
+const Libre = localFont({
+  src: '../public/fonts/LibreBaskerville/LibreBaskerville-Regular.ttf',
+  variable: '--font-Libre',
+  weight: '300',
+});
+const Hand=localFont({
+  src: '../public/fonts/Hand/ArchitectsDaughter-Regular.ttf',
+  variable: '--font-Hand',
   weight: '300',
 });
 
@@ -28,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${ppmori.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`${ppmori.variable} ${jetbrains.variable} ${Libre.variable} ${Hand.variable} `}>
       <body>
         <header className="w-full h-12 flex items-center bg-black/95   z-50">
   <div className="flex items-center px-6">

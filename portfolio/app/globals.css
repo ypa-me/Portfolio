@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-ppmori);
   --font-mono: var(--font-jetbrains);
+  --font-serif: var(--font-Libre);
+  --font-hand: var(--font-Hand);
 }
 
 @media (prefers-color-scheme: dark) {

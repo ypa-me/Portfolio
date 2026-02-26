@@ -6,6 +6,8 @@ const config: Config = {
       fontFamily: {
         ppmori: ['var(--font-ppmori)', 'sans-serif'],
         jetbrains: ['var(--font-jetbrains)', 'monospace'],
+        libre:['var(--font-Libre)', 'serif'],
+        hand:['var(--font-Hand)', 'cursive'],
       },
     },
   },
