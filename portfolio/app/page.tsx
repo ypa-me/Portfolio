@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className=" bg-zinc-50 font-sans dark:bg-black">
       
-      <main className="w-full h-full snap-none">
+      <main className="no-scrollbar w-full h-full snap-none">
 
 
 

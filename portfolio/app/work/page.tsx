@@ -37,7 +37,7 @@ export default function ProjectsPage() {
                 <p className="font-mono text-sm text-gray-500 mt-2">{project.desc}</p>
                 
                 
-                <Link className=" absolute bottom-15 h-auto uppercase font-mono text-xs left-5 right-5 w-auto mt-auto opacity-0 group-hover:opacity-100 transition-opacity  tracking-widest  backdrop-blur-none border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group-hover:scale-[1.02] 
+                <Link href="ypa.one" className=" absolute bottom-15 h-auto uppercase font-mono text-xs left-5 right-5 w-auto mt-auto opacity-0 group-hover:opacity-100 transition-opacity  tracking-widest  backdrop-blur-none border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group-hover:scale-[1.02] 
                   hover:bg-white/10 
                   hover:border-white/30 
                   hover:backdrop-blur-xl 
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
                   hover:shadow-white/5">
                   View Deployed Website
                 </Link>
-                <Link className="absolute px-4 py-2 bottom-2 left-5 right-5 w-auto font-mono mt-auto opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest border border-white/20 px-4 py-2 rounded-full">
+                <Link href="ypa.one" className="absolute px-4 py-2 bottom-2 left-5 right-5 w-auto font-mono mt-auto opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest border border-white/20  rounded-full">
                   View GitHub Repo
                 </Link>
               </div>
@@ -67,7 +67,7 @@ export default function ProjectsPage() {
                 key={project.id} 
                 className="w-50 h-50 gap-5 p-6 border border-white/20 rounded-3xl bg-gradient-to-br from-white/5 to-transparent hover:bg-white/10 transition-all group"
               >
-                <div className={`w-10 h-1 bg-gradient-to-r ${project.color} mb-4`} />
+                <div className={`w-10 h-1  mb-4`} />
                 <h3 className="text-xl font-bold">{project.title}</h3>
                 <p className="text-sm text-white/50 mt-2">{project.desc}</p>
                 
