@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
 }
 
@@ -26,40 +26,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-.glow-capture {
-  position: relative;
-  overflow: hidden;
-}
 
-.glow-overlay {
-  --glow-size: 10rem;           
-  --glow-color: #05050586;
-  position: absolute;
-  mix-blend-mode: soft-lighten;
-  
-  inset: 0;
-  pointer-events: none;
-  opacity: var(--glow-opacity, 0);
-  background: radial-gradient(
-    circle var(--glow-size) at var(--glow-x, 50%) var(--glow-y, 50%),
-    var(--glow-color),
-    transparent 60%
-  );
-  transition: opacity 200ms ease;
-}
-.reacts-to-glow {
-  position: relative;
-  z-index: 10;
-  color: white;
-}
-
-
-.no-glow {
-  position: relative;
-  z-index: 20; 
-}
 section {
   min-height: 100vh;
+  
   scroll-snap-align: start;
 }
 
@@ -83,5 +53,12 @@ section {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 
+}
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  touch-action: pan-y;
 }
 

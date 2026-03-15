@@ -40,15 +40,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${ppmori.variable} ${jetbrains.variable} ${Libre.variable} ${Hand.variable} `}>
-      <body>
-        <header className="fixed left-0 w-full h-12 flex items-center bg-black   z-50">
+    <html lang="en" className={`${ppmori.variable} ${jetbrains.variable} ${Libre.variable} ${Hand.variable} overflow-x-hidden no-scrollbar`}>
+      <body className="overflow-clip">
+        <header className="fixed left-0 w-full h-12 flex items-center bg-black relative   z-50">
   <div className=" absolute left-0">
     <Image
       src="/Black Outline Light.png"
       alt="Main logo"
-      width={120}   // Reduced from 150
-      height={32}   // Reduced from 100 (fits h-12 perfectly)
+      width={120}   
+      height={32}   
       priority
       className="object-contain"
     />

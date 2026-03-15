@@ -37,7 +37,7 @@ export default function DotsBackground() {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 max-w-full max-h-full">
         {dots.map((dot) => (
           <div
             key={dot.id}

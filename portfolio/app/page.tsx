@@ -5,244 +5,108 @@ import DotsBackground from './components/DotsBackground';
 import StarCrux from './components/StarCrux';
 import DiamondCross from './components/DiamondCross';
 import FalseCross from './components/FalseCross';
-import navigation from "next/navigation";
-
-
 import { useEffect } from "react";
 
 export default function Home() {
-  
-    
   return (
-    <div className=" bg-zinc-50 font-sans dark:bg-black">
-      
-      <main className="no-scrollbar w-full h-full snap-none">
+    // //here: Added max-w-full and relative to the wrapper
+    <div className="bg-zinc-50 font-sans overflow-x-hidden max-w-full relative">
+      {/* //here: Added overflow-x-hidden and w-full to main */}
+      <main className="no-scrollbar w-full h-full bg-black overflow-x-hidden text-white">
 
-
-
-         
-      <section className="h-screen flex  justify-center bg-black relative">
+      <section className="h-screen max-w-full flex justify-center bg-black relative overflow-hidden">
         <DotsBackground />
-        
-        <div className="absolute left-8 py-5 px-5 w-175 top-1/2 -translate-y-1/2 z-10 ">
-        <h1 className=" font-ppmori text-5xl  ">
-            Achieve high-performance systems that turn complex ideas into scalable reality.
+        <div className=" absolute  max-w-4xl left-4 p-10 top-1/2 -translate-y-1/2 z-10 ">
+          <h1 className=" font-sans text-3xl md:text-4xl xl:text-5xl font-light text-white">
+            Master the complexity of your life, work or businesses.
           </h1>
-          
-          
         </div>
-
-        
-
-        <div className="absolute top-12 bottom-12 right-12 h-200 w-150 ">
+        <div className="absolute hidden xl:block top-12 bottom-12 right-12 h-200 w-150 ">
           <StarCrux sizeW={535} sizeH={750} />
         </div>
-        
-    </section>
+      </section>
 
-
-
-
-
-
-
-      
-
-      <section className="h-screen flex  justify-center  relative">
-        <div className="absolute right-0  w-200 top-1/2 -translate-y-1/2 z-10 ">
-        <p className="font-serif text-2xl text-gray-500 ">Yashvin P.</p>
-          <h3 className="font-sans text-5xl md:text-4xl font-light text-white">Freelancer | Web and Software developer</h3>
-          <p className="font-mono text-xl md:text-2xl pt-5 text-gray-300 ">
-            Problems should be solved with the utmost accuracy.
-
+      <section className="h-screen flex justify-center relative overflow-hidden">
+        <div className=" absolute max-w-full max-w-4xl right-4 p-10 top-1/2 -translate-y-1/2 z-10 ">
+          <p className="font-serif text-md md:text-md xl:text-2xl text-gray-500 ">Yashvin P.</p>
+          <h3 className="font-sans text-3xl md:text-4xl xl:text-5xl font-light text-white">Freelancer | Web and Software developer</h3>
+          <p className="font-mono text-xl md:text-lg xl:text-2xl pt-5 text-gray-300 ">
+            Your problems are unique. Your solutions should be too.
           </p>
-          <div className="absolute left-0 flex justify-center  ">
-            
-            <div className = " p-2 bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-2xl  hover:scale-[1.02] ">
-              <p className="font-sans text-2xl text-gray-300 ">Websites</p>
+          <div className="mt-5 flex flex-wrap items-center gap-2">
+            <span className="font-mono text-xl md:text-lg xl:text-2xl text-gray-300">Custom</span>
+            <div className="p-1 bg-white/5 backdrop-blur-xs border border-white/20 rounded-2xl">
+              <p className="font-sans text-xl md:text-lg xl:text-2xl text-gray-300">Websites</p>
             </div>
-            <div className ="p-2"><p className="font-mono text-2xl text-gray-300   ">and</p></div>
-            <div className = " p-2 bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-2xl  overflow-hidden group">
-              <p className="font-sans text-2xl text-gray-300  ">Software</p>
+            <span className="font-mono text-xl md:text-lg xl:text-2xl text-gray-300">and</span>
+            <div className="p-1 bg-white/5 backdrop-blur-xs border border-white/20 rounded-2xl">
+              <p className="font-sans text-xl md:text-lg xl:text-2xl text-gray-300">Software</p>
             </div>
-            <div className ="p-2"><p className="font-mono text-2xl text-gray-300  ">allow us to do exactly that.</p></div>
+            <span className="font-mono text-xl md:text-lg xl:text-2xl text-gray-300">is how I build for your specific needs.</span>
           </div>
-          <div className ="absolute flex items-center"> <p className =" 
-          font-serif text-s pt-20 text-gray-500">Mauritius | UTC + 4:00 </p></div>
-          
-
-          
-
-          
+          <div className ="font-serif mt-10 text-md md:text-md xl:text-2xl text-gray-500"><p>Mauritius | UTC + 4:00 </p></div>
         </div>
-         <div className="absolute top-12 bottom-12 left-12 h-200 w-150 ">
+         <div className="absolute hidden xl:block top-12 bottom-12 left-12 h-200 w-150 ">
           <DiamondCross sizeW={460} sizeH={900} />
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-      <section className="h-screen  flex justify-center relative ">
-        <div className="absolute left-8 w-200 top-1/2 -translate-y-1/2 z-10">
-          <h2 className="font-sans text-5xl md:text-4xl font-light">What I believe in</h2>
-          
-          <div className="absolute flex justify-center gap-5 py-10">
-            <div className =" w-50 h-70 p-5 bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group
-            hover:scale-[1.02] 
-                  hover:bg-white/10 
-                  hover:border-white/30 
-                  hover:backdrop-blur-xl 
-                  hover:shadow-2xl 
-                  hover:shadow-white/5">
-              <p className ="font-mono text-2xl text-gray-300">Freedom and ability to express your ideas into fruition.</p>
-            </div>
-            <div className =" w-50 h-70 p-5 bg-white/1  backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group hover:scale-[1.02] 
-                  hover:bg-white/10 
-                  hover:border-white/30 
-                  hover:backdrop-blur-xl 
-                  hover:shadow-2xl 
-                  hover:shadow-white/5">
-              <p className ="font-mono text-2xl text-gray-300">Solving problems should feel effortless and fun.</p>
-            </div>
-            <div className =" w-50 h-70 p-5  bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group
-                    hover:scale-[1.02] 
-                  hover:bg-white/10 
-                  hover:border-white/30 
-                    hover:backdrop-blur-xl 
-                    hover:shadow-2xl 
-                    hover:shadow-white/5">
-              <p className ="font-mono text-2xl text-gray-300">Passion is the key to greatness.</p>
-            </div>
-
+      {/* //here: Added overflow-hidden to this section to stop the cards from bleeding */}
+      <section className="min-h-screen lg:h-screen flex justify-center relative py-20 lg:py-0 overflow-hidden">
+        <div className="lg:absolute left-8 my-52 w-full max-w-6xl px-4 lg:top-1/2 lg:-translate-y-1/2 z-10">
+          <h2 className="font-sans text-2xl md:text-4xl xl:text-5xl mb-10 lg:mb-0">What I believe in</h2>
+          <div className="flex flex-col md:flex-row justify-center lg:justify-start gap-5 py-10 ">
+            {[
+              "Freedom and ability to express your ideas into fruition.",
+              "Solving problems should feel effortless and fun.",
+              "Passion is the key to greatness."
+            ].map((text, i) => (
+              <div key={i} className ="w-full md:w-1/3 lg:w-60 lg:h-75 p-5 bg-white/1 backdrop-blur-xs border border-white/20 rounded-3xl overflow-hidden group hover:scale-[1.02] transition-all">
+                <p className ="font-mono text-lg md:text-xl xl:text-2xl text-gray-300">{text}</p>
+              </div>
+            ))}
           </div>
-          
         </div>
-        <div className= "absolute top-12 bottom-12 right-12 h-200 w-150" >
+        <div className= "absolute hidden xl:block top-12 bottom-12 right-12 h-200 w-150" >
           <FalseCross sizeW={641} sizeH={750} />
         </div>
       </section>
 
-
-
-
-
-
-
-
-      <section className="h-screen  flex justify-center relative overflow-hidden ">
-
-        <h3 className="absolute font-sans text-4xl top-20 flex justify-center">If you want</h3>
-        
-           
-
-
-
-
-
-
-
-            <div className =" absolute bg-white/1  left-10 bottom-20 w-40 h-40 p-5  backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group
-                    hover:scale-[1.02] 
-                  hover:bg-white/10 
-                  hover:border-white/30 
-                    hover:backdrop-blur-xl 
-                    hover:shadow-2xl 
-                    hover:shadow-white/5">
-                      <p className="font-mono text-2xl">Fast Delivery </p>
-                      <p className="font-mono text-md text-gray-500">within weeks</p>
-
+      {/* //here: Added overflow-hidden */}
+      <section className="min-h-screen lg:h-screen flex flex-col justify-center items-center relative overflow-hidden px-4">
+        <h3 className="font-sans text-3xl md:text-4xl xl:text-5xl mb-10">If you want</h3>
+        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 w-full max-w-6xl">
+            <div className ="w-full md:w-64 lg:w-48 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl">
+              <p className="font-mono text-xl md:text-2xl">Fast Delivery</p>
+              <p className="font-mono text-md text-gray-500">within weeks</p>
             </div>
-            <div className =" absolute  left-175 bottom-60 w-75 h-40 p-5 bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group
-                    hover:scale-[1.02] 
-                  hover:bg-white/10 
-                  hover:border-white/30 
-                    hover:backdrop-blur-xl 
-                    hover:shadow-2xl 
-                    hover:shadow-white/5">
-                      <p className="font-mono text-2xl">Scalability and Reliability</p>
-                      <p className="font-mono text-md text-gray-500">Extensive testing and futureproofing</p>
-
+            <div className ="w-full md:w-80 lg:w-96 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl">
+              <p className="font-mono text-xl md:text-2xl">Scalability and Reliability</p>
+              <p className="font-mono text-md text-gray-500">Extensive testing and futureproofing</p>
             </div>
-            <div className =" absolute  right-20 bottom-30 w-60 h-40 p-5 bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group
-                    hover:scale-[1.02] 
-                  hover:bg-white/10 
-                  hover:border-white/30 
-                    hover:backdrop-blur-xl 
-                    hover:shadow-2xl 
-                    hover:shadow-white/5">
-                      <p className="font-mono text-2xl">Endless Customisation</p>
-                      <p className="font-mono text-md text-gray-500">Make it your own</p>
-
+            <div className ="w-full md:w-72 lg:w-64 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl">
+              <p className="font-mono text-xl md:text-2xl">Endless Customisation</p>
+              <p className="font-mono text-md text-gray-500">Make it your own</p>
             </div>
-            <div className =" absolute bg-white/1 left-100 top-40 w-40 h-50 p-5  backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl  overflow-hidden group
-                    hover:scale-[1.02] 
-                  hover:bg-white/10 
-                  hover:border-white/30 
-                    hover:backdrop-blur-xl 
-                    hover:shadow-2xl 
-                    hover:shadow-white/5">
-                      <p className="font-mono text-2xl">Quality</p>
-                      <p className="font-mono text-md text-gray-500">Extreme attention to detail</p>
-
+            <div className ="w-full md:w-64 lg:w-56 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl">
+              <p className="font-mono text-xl md:text-2xl">Quality</p>
+              <p className="font-mono text-md text-gray-500">Extreme attention to detail</p>
             </div>
-
-
-
-
-
-
-
-
-
-            
-          
-        
+        </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
-  <div className="flex flex-col items-center gap-12">
-    <h2 className="font-sans text-5xl text-white text-center">
-      You have the right person for the job.
-    </h2>
-    <Link href="https://www.upwork.com/freelancers/~01dad57f09646f0483" className="font-mono text-2xl w-auto p-5 text-center  bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-green-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-green-500/20">
-        Work With Me 
-      </Link>
-
-    <div className="flex flex-row items-center justify-center gap-10">
-      <Link href="/work" className="font-mono text-2xl w-44 p-5 text-center  bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-white/5 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-white/5">
-        My Work
-      </Link>
-
-      <Link href="/results" className="font-mono text-2xl w-44 p-5 text-center  bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-white/5 hover:border-white/5 hover:backdrop-blur-md hover:shadow-2xl hover:shadow-white/5">
-        Reviews
-      </Link>
-
-      <Link href="/blog" className="font-mono text-2xl w-44 p-5 text-center  bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-red-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-red-500/20">
-        My Blog
-      </Link>
-    </div>
-    <Link href="/results" className="font-mono text-2xl w-auto p-5 text-center  bg-white/1 backdrop-blur-xs border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-yellow-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-yellow-500/20">
-        Donate
-      </Link>
-
-  </div>
-</section>
+        <div className="flex flex-col items-center gap-12 px-4">
+          <h2 className="font-sans text-3xl md:text-5xl text-white text-center">You have the right person for the job.</h2>
+          <Link href="https://www.upwork.com/freelancers/~01dad57f09646f0483" className="font-mono text-xl md:text-2xl p-5 bg-white/1 border border-white/20 rounded-3xl transition-all hover:scale-[1.02] hover:bg-green-500/50">Work With Me</Link>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-10">
+            <Link href="/work" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 border border-white/20 rounded-3xl hover:bg-white/5 transition-all">My Work</Link>
+            <Link href="/results" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 border border-white/20 rounded-3xl hover:bg-white/5 transition-all">Reviews</Link>
+            <Link href="/blog" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 border border-white/20 rounded-3xl hover:bg-red-500/50 transition-all">My Blog</Link>
+          </div>
+          <Link href="/results" className="font-mono text-xl md:text-2xl p-5 bg-white/1 border border-white/20 rounded-3xl hover:bg-yellow-500/50 transition-all">Donate</Link>
+        </div>
+      </section>
     </main>
     </div>
   );
