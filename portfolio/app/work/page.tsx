@@ -6,23 +6,27 @@ export default function ProjectsPage() {
   
   
   const webProjects = [
-    { id: 1, title: "My Portfolio", desc: "A portfolio website that shows my projects, skills, reviews/testimonials and also has my blog.", image: "/projects/scraper.jpg",skills: ["Next.js", "TypeScript", "Tailwind"],liveURL:"https://ypa.one",repoURL:"" },
+    { id: 1, title: "Business CRM", desc: "A CRM website that automates email workflows, and meeting scheduling.",skills: ["Next.js", "TypeScript", "Tailwind","PocketBase", "n8n"], image: "/Jane-Business.png",liveURL:"https://jane-business.ypa.one",repoURL:"https://github.com/ypa-me/Business-Workflow" },
 
-    { id: 2, title: "Business CRM", desc: "A business website for SMB that does simple CRM workflows.",skills: ["Next.js", "TypeScript", "Tailwind","PocketBase", "n8n"], image: "/Jane-Business.png",liveURL:"https://jane-business.ypa.one",repoURL:"" },
-    { id: 3, title: "My Portfolio", desc: "A portfolio website that shows my projects, skills, reviews/testimonials and also has my blog.", image: "/projects/scraper.jpg",skills: ["Next.js", "TypeScript", "Tailwind"],liveURL:"https://ypa.one",repoURL:"" },
+    { id: 2, title: "My Portfolio", desc: "A portfolio website that shows my projects, skills, reviews/testimonials and also has my blog.", image: "/Portfolio.png",skills: ["Next.js", "TypeScript", "Tailwind"],liveURL:"https://ypa.one",repoURL:"https://github.com/ypa-me/Portfolio" },
 
-    { id: 4, title: "Business CRM", desc: "A business website for SMB that does simple CRM workflows.",skills: ["Next.js", "TypeScript", "Tailwind","PocketBase", "n8n"], image: "/Jane-Business.png",liveURL:"https://jane-business.ypa.one",repoURL:"" },
+    
+    
+
+    { id: 3, title: "Webscraper", desc: "A simple website that scrapes HTML websites",skills: ["Next.js", "TypeScript", "Tailwind","Cheerio"], image: "/scrapechat.png",liveURL:"https://scrapechat.ypa.one",repoURL:"https://github.com/ypa-me/Webscraper" },
+
+    { id: 4, title: "Websocket Chat Application", desc: "A simple chat website. This website is NOT deployed as of now.",skills: ["React", "Node.js", "Socket.io","CSS"], image: "/chat3.png",liveURL:"",repoURL:"https://github.com/ypa-me/WebSocket-based-chat-application" },
+
+    
+
+
 
     
   ];
   const softwareProjects = [
-    { id: 1, title: "My Portfolio", desc: "A portfolio website that shows my projects, skills, reviews/testimonials and also has my blog.", image: "/projects/scraper.jpg",skills: ["Next.js", "TypeScript", "Tailwind"],liveURL:"https://ypa.one",repoURL:"" },
+    { id: 1, title: "Business Management ", desc: "A platform that automates everything from first contact to final payment.", image: "/InProgress.png",skills: ["Electron", "TypeScript", "Tailwind","Nextron","n8n","pocketbase"],liveURL:"https://ypa.one",repoURL:"" },
 
-    { id: 2, title: "Business CRM", desc: "A business website for SMB that does simple CRM workflows.",skills: ["Next.js", "TypeScript", "Tailwind","PocketBase", "n8n"], image: "/Jane-Business.png",liveURL:"https://jane-business.ypa.one",repoURL:"" },
-    { id: 3, title: "My Portfolio", desc: "A portfolio website that shows my projects, skills, reviews/testimonials and also has my blog.", image: "/projects/scraper.jpg",skills: ["Next.js", "TypeScript", "Tailwind"],liveURL:"https://ypa.one",repoURL:"" },
-
-    { id: 4, title: "Business CRM", desc: "A business website for SMB that does simple CRM workflows.",skills: ["Next.js", "TypeScript", "Tailwind","PocketBase", "n8n"], image: "/Jane-Business.png",liveURL:"https://jane-business.ypa.one",repoURL:"" },
-
+    
     
   ];
 
@@ -40,7 +44,7 @@ export default function ProjectsPage() {
           <div className="absolute left-1/2 -translate-x-1/2 top-14 z-20 
                   p-6 backdrop-blur-md border border-white/20 rounded-3xl 
                   w-[90%] max-w-max text-center shadow-2xl">
-            <h2 className=" text-xl md:text-2xl font-bold uppercase tracking-tighter ">Web Development</h2>
+            <h2 className=" text-xl md:text-2xl font-sans uppercase tracking-tighter ">Web Development</h2>
           </div>
 
           {/* Grid: responsive columns */}
@@ -116,11 +120,11 @@ export default function ProjectsPage() {
           <div className="absolute left-1/2 -translate-x-1/2 top-14 z-20 
                   p-6 backdrop-blur-md border border-white/20 rounded-3xl 
                   w-[90%] max-w-max text-center shadow-2xl">
-            <h2 className=" text-xl md:text-2xl font-bold uppercase tracking-tighter ">Software Development</h2>
+            <h2 className=" text-xl md:text-2xl font-sans uppercase tracking-tighter ">Software Development</h2>
           </div>
 
           {/* Grid: responsive columns */}
-          <div className="flex-1 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 2xl:grid-cols-3 p-6 pt-40 gap-5 no-scrollbar relative">
+          <div className=" overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 2xl:grid-cols-3 p-6 pt-40 gap-5 no-scrollbar relative">
             {softwareProjects.map((project) => (
   <div 
     key={project.id} 

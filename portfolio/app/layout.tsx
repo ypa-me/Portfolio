@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ppmori.variable} ${jetbrains.variable} ${Libre.variable} ${Hand.variable} overflow-x-hidden no-scrollbar`}>
       <body className="overflow-clip">
-        <header className="fixed left-0 w-full h-12 flex items-center bg-black relative   z-50">
+        <header className="fixed top-0 left-0 w-full h-12 flex items-center bg-black z-[100]">
   <div className=" absolute left-0">
     <Image
       src="/Black Outline Light.png"
@@ -53,11 +53,23 @@ export default function RootLayout({
       className="object-contain"
     />
   </div>
-  <div>
-    <Link href="https://www.upwork.com/freelancers/~01dad57f09646f0483" className=" absolute bg-white/1 right-0 top-0 font-mono text-xs w-auto h-auto text-center p-2 backdrop-blur-0.5 border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-md overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-green-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-green-500/20">
-        Work With Me 
-      </Link>
-  </div>
+  <div className="absolute right-4 flex flex-row gap-2 items-center">
+  <Link href="/work" className="relative bg-white/1 font-mono text-xs w-auto h-auto text-center p-2 backdrop-blur-0.5 border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-md overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-gray-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-gray-500/20">
+    My work 
+  </Link>
+  <Link href="/reviews" className="relative bg-white/1 font-mono text-xs w-auto h-auto text-center p-2 backdrop-blur-0.5 border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-md overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-gray-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-gray-500/20">
+    Reviews 
+  </Link>
+  <Link href="/blog" className="relative bg-white/1 font-mono text-xs w-auto h-auto text-center p-2 backdrop-blur-0.5 border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-md overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-gray-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-gray-500/20">
+    Blog 
+  </Link>
+  <Link href="https://www.paypal.com/ncp/payment/R9QD6UHBYMJXY" className="relative bg-white/1 font-mono text-xs w-auto h-auto text-center p-2 backdrop-blur-0.5 border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-md overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-yellow-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-yellow-500/20">
+    Donate 
+  </Link>
+  <Link href="https://www.upwork.com/freelancers/~01dad57f09646f0483?mp_source=share" className="relative bg-white/1 font-mono text-xs w-auto h-auto text-center p-2 backdrop-blur-0.5 border border-white/20 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6),0_0_20px_rgba(0,0,0,0.4)] ring-1 ring-white/5 ring-inset rounded-md overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:bg-green-500/50 hover:border-white/30 hover:backdrop-blur-xl hover:shadow-2xl hover:shadow-green-500/20">
+    Work With Me 
+  </Link>
+</div>
 </header>
         
         

@@ -12,11 +12,11 @@ const DiamondCross: React.FC<DiamondCrossProps> = ({
   // Stars: Miaplacidus (Top), Upsilon (Bottom), Theta (Left), Omega (Right)
   // All are A- or B-type (White/Blue-white)
   const stars = [
-    { name: 'Miaplacidus', b: '5%', l: '50%', w: 39, h: 39, d: '1.0s', c: '#ffffff' },
-    { name: 'Upsilon', t: '48%', r: '5%', w: 37, h: 37, d: '3.0s', c: '#ffffff' },
-    { name: 'Theta', t: '48%', l: '5%', w: 37, h: 37, d: '2.0s', c: '#ffffff' },
-    { name: 'Omega', t: '5%', l: '50%', w: 32, h: 32, d: '0s', c: '#ffffff' },
-  ];
+  { name: 'Miaplacidus', b: '5%', l: '50%', w: 39, h: 39, d: '1.0s', c: '#ffffff' }, // Bottom
+  { name: 'Upsilon',     t: '48%', r: '5%', w: 37, h: 37, d: '3.0s', c: '#ffffff' }, // Right  ← broken
+  { name: 'Theta',       t: '48%', l: '5%', w: 37, h: 37, d: '2.0s', c: '#ffffff' }, // Left
+  { name: 'Omega',       t: '5%',  l: '50%',w: 32, h: 32, d: '0s',   c: '#ffffff' }, // Top
+];
 
   return (
     <div className={`relative ${className}`} style={{ width: sizeW, height: sizeH }}>
@@ -27,7 +27,7 @@ const DiamondCross: React.FC<DiamondCrossProps> = ({
           align-items: center;
           justify-content: center;
           
-          transform: translateX(-50%);
+          
         }
         .star-shape {
           width: 100%;
@@ -35,8 +35,8 @@ const DiamondCross: React.FC<DiamondCrossProps> = ({
           clip-path: polygon(50% 0%, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0% 50%, 42% 42%);
         }
         @keyframes twinkle {
-          0%, 100% { opacity: 1; transform: scale(1) translateX(-50%); }
-          50% { opacity: 0.4; transform: scale(0.7) translateX(-50%); }
+          0%, 100% { opacity: 1; transform: scale(1)  }
+          50% { opacity: 0.4; transform: scale(0.7)  }
         }
       `}</style>
       {stars.map((s, i) => (
