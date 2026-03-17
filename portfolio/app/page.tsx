@@ -76,19 +76,19 @@ export default function Home() {
       <section className="min-h-screen lg:h-screen flex flex-col justify-center items-center relative overflow-hidden px-4">
         <h3 className="font-sans text-3xl md:text-4xl xl:text-5xl mb-10">If you want</h3>
         <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 w-full max-w-6xl">
-            <div className ="w-full md:w-64 lg:w-48 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl hover:scale-[1.02] transition-all">
+            <div className ="w-full md:w-64 lg:w-48 h-auto md:h-60 p-5 bg-white/1 border backdrop-blur-xs border-white/20 rounded-3xl hover:scale-[1.02] transition-all">
               <p className="font-mono text-xl md:text-2xl ">Fast Delivery</p>
               <p className="font-mono text-md text-gray-500">within weeks</p>
             </div>
-            <div className ="w-full md:w-80 lg:w-96 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl hover:scale-[1.02] transition-all">
+            <div className ="w-full md:w-80 lg:w-96 h-auto md:h-60 p-5 bg-white/1 border backdrop-blur-xs border-white/20 rounded-3xl hover:scale-[1.02] transition-all">
               <p className="font-mono text-xl md:text-2xl ">Scalability and Reliability</p>
               <p className="font-mono text-md text-gray-500">Extensive testing and futureproofing</p>
             </div>
-            <div className ="w-full md:w-72 lg:w-64 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl hover:scale-[1.02] transition-all">
+            <div className ="w-full md:w-72 lg:w-64 h-auto md:h-60 p-5 bg-white/1 border border-white/20 backdrop-blur-xs rounded-3xl hover:scale-[1.02] transition-all">
               <p className="font-mono text-xl md:text-2xl">Endless Customisation</p>
               <p className="font-mono text-md text-gray-500">Make it your own</p>
             </div>
-            <div className ="w-full md:w-64 lg:w-56 h-auto md:h-60 p-5 bg-white/1 border border-white/20 rounded-3xl hover:scale-[1.02] transition-all">
+            <div className ="w-full md:w-64 lg:w-56 h-auto md:h-60 p-5 bg-white/1 backdrop-blur-xs border border-white/20 rounded-3xl hover:scale-[1.02] transition-all">
               <p className="font-mono text-xl md:text-2xl">Quality</p>
               <p className="font-mono text-md text-gray-500">Extreme attention to detail</p>
             </div>
@@ -98,13 +98,13 @@ export default function Home() {
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
         <div className="flex flex-col items-center gap-12 px-4">
           <h2 className="font-sans text-3xl md:text-5xl text-white text-center">I would love to work with you.</h2>
-          <Link href="https://www.upwork.com/freelancers/~01dad57f09646f0483?mp_source=share" className="font-mono text-xl md:text-2xl p-5 bg-white/1 border border-white/20 rounded-3xl transition-all hover:scale-[1.02] hover:bg-green-500/50">Work With Me</Link>
+          <Link href="https://www.upwork.com/freelancers/~01dad57f09646f0483?mp_source=share" className="font-mono text-xl md:text-2xl p-5 backdrop-blur-xs bg-white/1 border border-white/20 rounded-3xl transition-all hover:scale-[1.02] hover:bg-green-500/50">Work With Me</Link>
           <div className="flex flex-col md:flex-row gap-4 md:gap-10">
-            <Link href="/work" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 border border-white/20 rounded-3xl hover:bg-white/5  hover:scale-[1.02] transition-all">My Work</Link>
-            <Link href="/results" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 border border-white/20 rounded-3xl hover:bg-white/5 hover:scale-[1.02] transition-all">Reviews</Link>
-            <Link href="/blog" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 border border-white/20 rounded-3xl hover:bg-red-500/50 hover:scale-[1.02] transition-all">My Blog</Link>
+            <Link href="/work" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 backdrop-blur-xs border border-white/20 rounded-3xl hover:bg-white/5  hover:scale-[1.02] transition-all">My Work</Link>
+            <Link href="/results" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 backdrop-blur-xs border border-white/20 rounded-3xl hover:bg-white/5 hover:scale-[1.02] transition-all">Reviews</Link>
+            <Link href="/blog" className="font-mono text-xl md:text-2xl w-44 p-5 text-center bg-white/1 backdrop-blur-xs border border-white/20 rounded-3xl hover:bg-red-500/50 hover:scale-[1.02] transition-all">My Blog</Link>
           </div>
-          <Link href="https://www.paypal.com/ncp/payment/R9QD6UHBYMJXY" className="font-mono text-xl md:text-2xl p-5 bg-white/1 border border-white/20 rounded-3xl hover:bg-yellow-500/50 hover:scale-[1.02] transition-all">Donate</Link>
+          <Link href="https://www.paypal.com/ncp/payment/R9QD6UHBYMJXY" className="font-mono text-xl md:text-2xl backdrop-blur-xs p-5 bg-white/1 border border-white/20 rounded-3xl hover:bg-yellow-500/50 hover:scale-[1.02] transition-all">Donate</Link>
         </div>
       </section>
     </main>
